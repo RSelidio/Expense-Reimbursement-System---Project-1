@@ -1,0 +1,72 @@
+<div class="container pt-3 my-3 border">
+  <div style="text-align:center;color:rgb(0, 0, 0);font-size:20px;" class="card-header bg-mute">Add New Reimbursement ->
+    <button type="button" class="btn btn-success" (click)="toggleAdd()">
+      Add Reimbursement
+    </button>
+  </div>
+ 
+  <p></p>
+  <hr>
+  <div *ngIf="flag"  (submit)="addReimbursement()">
+    <form #myForm="ngForm">
+      <div style="text-align:center;color:white;font-size:20px;" class="card-header bg-info">Add New Reimbursement</div>
+      <div class="card-body">
+        <label for="user_id" class="mb-2 mr-sm-2">User ID:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="user_id" placeholder="Enter ID" name="user_id"
+          [(ngModel)]="userInfo.user_id" readonly>
+        <label for="rb_date" class="mb-2 mr-sm-2">Date :</label>
+        <input type="date" class="form-control mb-2 mr-sm-2" id="rb_date" placeholder="Enter Date" name="rb_date"
+          [(ngModel)]="newreimbursement.rb_date"  required>
+        <label for="rb_amount" class="mb-2 mr-sm-2">Reimbursement Amount:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="rb_amount" placeholder="Enter Amount" name="rb_amount"
+          [(ngModel)]="newreimbursement.rb_amount"  required>
+          <label for="rb_image" class="mb-2 mr-sm-2">Image:</label>
+          <input type="text" class="form-control mb-2 mr-sm-2" id="rb_image" placeholder="Enter Image" name="rb_image"
+            [(ngModel)]="newreimbursement.rb_image" >
+        
+        <div class="card-footer bg-info">
+          <button type="submit" class="btn btn-danger"    [disabled]='!myForm.valid' >ADD
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <h2 style="text-align:center;">Pending Reimbursements</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>RID</th>
+        <th>Username</th>
+        <th>Date</th>
+        <th>Amount</th>
+        <th>Receipt</th>
+        <th>Delete</th>
+        <th>Edit</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reimbursement of allreimbursement">
+        <td>{{ reimbursement.rb_id }}</td>
+        <td>{{ reimbursement.username }}</td>
+        <td>{{ reimbursement.rb_date }}</td>
+        <td>${{ reimbursement.rb_amount }}</td>
+        <td><img [src]="reimbursement.rb_image" height="50px" width="80px"/></td>
+        <td><button type="button" class="btn btn-danger small" (click)="removeReimbursement(reimbursement.rb_id)">
+            <span class="material-icons bg-danger">delete</span>
+          </button>
+        </td>
+        <td><button type="button" class="btn btn-primary small" (click)="goToEditComponent(reimbursement.rb_id)">
+            <span class="material-icons">edit</span>
+          </button>
+        </td>
+        <td>
+            <label  style="font-weight: bold;color:rgb(221, 30, 30);font-size:20px;text-align:center;">{{reimbursement.rb_desc}}</label>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

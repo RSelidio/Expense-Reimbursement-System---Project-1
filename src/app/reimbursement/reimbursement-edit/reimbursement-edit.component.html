@@ -1,0 +1,66 @@
+<div class="container mb-5">
+    <h2>Edit Reimbursement Form</h2>
+    <div class="card mt-5">
+      <div class="card-header bg-warning">LOGIN</div>
+      <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="rb_id">Reimbursement ID:</label>
+                <input type="text" 
+                       class="form-control" 
+                       id="rb_id" 
+                       placeholder="Reimbursement ID" 
+                       name="rb_id"
+                       [(ngModel)]="updatereimbursement.rb_id"
+                       readonly>
+              </div>
+              <div class="form-group">
+                <label for="mgr_id">Manager ID:</label>
+                <input type="text" 
+                       class="form-control" 
+                       id="mgr_id" 
+                       placeholder="Manager ID" 
+                       name="mgr_id"
+                       [(ngModel)]="updatereimbursement.mgr_id"
+                       readonly>
+              </div>
+              <div class="form-group">
+                <label for="emp_id">Employee ID:</label>
+                <input type="text" 
+                       class="form-control" 
+                       id="emp_id" 
+                       placeholder="employee ID" 
+                       name="emp_id"
+                       [(ngModel)]="updatereimbursement.emp_id"
+                       readonly>
+              </div>
+              <div class="form-group">
+                <label for="rb_date">Date :</label>
+                <input type="text" 
+                       class="form-control" 
+                       id="rb_date" 
+                       placeholder="Date" 
+                       name="rb_date"
+                       [(ngModel)]="updatereimbursement.rb_date"
+                       readonly>
+              </div>
+            <div class="form-group">
+              <label for="rb_amount">Reimbursement Amount:</label>
+              <input type="text" 
+                     class="form-control" 
+                     id="rb_amount" 
+                     placeholder="Enter amount" 
+                     name="rb_amount"
+                     [(ngModel)]="updatereimbursement.rb_amount">
+            </div>
+          </form>
+      </div> 
+      <div class="card-footer bg-warning">
+          <button 
+                type="button" 
+                class="btn btn-danger mr-5"
+                (click)="editreimbursement()">Update</button>
+  
+      </div>
+    </div>
+  </div>

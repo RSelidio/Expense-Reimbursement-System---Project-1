@@ -1,0 +1,31 @@
+{
+  "reimbursement": [
+    {
+      "rb_id": 7,
+      "mgr_id": 1,
+      "emp_id": 3,
+      "rb_date": "November-20-2021",
+      "rb_amount": 550,
+      "rb_status": false,
+      "remove_rb": false
+    },
+    {
+      "rb_id": 3,
+      "mgr_id": 1,
+      "emp_id": 2,
+      "rb_date": "November-20-2021",
+      "rb_amount": 530,
+      "rb_status": false,
+      "remove_rb": false
+    },
+    {
+      "rb_id": 6,
+      "mgr_id": 1,
+      "emp_id": 3,
+      "rb_date": "November-20-2021",
+      "rb_amount": 430,
+      "rb_status": false,
+      "remove_rb": false
+    }
+  ]
+}

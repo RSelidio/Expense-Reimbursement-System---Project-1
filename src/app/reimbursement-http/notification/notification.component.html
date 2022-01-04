@@ -1,0 +1,39 @@
+<div class="container mb-5">
+    <h2>Update Reimbursement</h2>
+    <div class="card mt-5">
+      <div style="font-weight: bold;color:white;font-size:30px;text-align:center;" class="card-header bg-info">Update Form</div>
+      <div class="card-body">
+        <form #myForm="ngForm" (submit)="editreimbursement()">
+          <div class="form-group">
+            <label for="rb_id">Reimbursement ID:</label>
+            <input type="text" class="form-control" id="rb_id" placeholder="Reimbursement ID" name="rb_id"
+              [(ngModel)]="updatereimbursement.rb_id" readonly>
+          </div>
+          <div class="form-group">
+            <label for="user_id">User ID:</label>
+            <input type="text" class="form-control" id="user_id" placeholder="User ID" name="user_id"
+              [(ngModel)]="updatereimbursement.user_id" readonly>
+          </div>
+          <div class="form-group">
+            <label for="rb_date">Date :</label>
+            <input type="date" class="form-control" id="rb_date" placeholder="Date" name="rb_date"
+              [(ngModel)]="updatereimbursement.rb_date" readonly>
+          </div>
+          <div class="form-group">
+            <label for="rb_amount">Reimbursement Amount:</label>
+            <input type="text" class="form-control" id="rb_amount" placeholder="Enter amount" name="rb_amount"
+              [(ngModel)]="updatereimbursement.rb_amount" readonly>
+          </div>
+          <div class="form-group">
+            <label for="rb_desc">Notify the user:</label>
+            <input type="text" class="form-control" id="rb_desc" placeholder="Message..." name="rb_desc"
+              [(ngModel)]="updatereimbursement.rb_desc" required>
+          </div>
+          <div class="card-footer bg-info">
+            <button type="submit" class="btn btn-danger mr-5" [disabled]='!myForm.valid'>Send</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+

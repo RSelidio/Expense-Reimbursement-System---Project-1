@@ -1,0 +1,56 @@
+<div class="container">
+    <div *ngIf="flag">
+      <form class="form-inline tm-5">
+        <label for="user_id" class="mb-2 mr-sm-2">User ID:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="user_id" placeholder="Enter ID" name="user_id"
+          [(ngModel)]="newreimbursement.user_id">
+        <label for="emp_id" class="mb-2 mr-sm-2">Date :</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="rb_date" placeholder="Enter Date" name="rb_date"
+          [(ngModel)]="newreimbursement.rb_date">
+        <label for="rb_amount" class="mb-2 mr-sm-2">Reimbursement Amount:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="rb_amount" placeholder="Enter Amount" name="rb_amount"
+          [(ngModel)]="newreimbursement.rb_amount">
+        
+        <button type="button" class="btn btn-primary" (click)="addReimbursement()">ADD
+        </button>
+      </form>
+    </div>
+    <h2 style="text-align:center;">Reimburstment List - Deny or Approve</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Image</th>
+          <th> Deny</th>
+          <th> Approve</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reimbursement of allreimbursement" >
+          <td>{{ reimbursement.rb_id }}</td>
+          <td>{{ reimbursement.username }}</td>
+          <td>{{ reimbursement.rb_date }}</td>
+          <td>{{ reimbursement.rb_amount }}</td>
+          <td><img [src]="reimbursement.rb_image" height="50px" width="80px"/></td>
+          <td>
+            <button type="button" class="btn btn-danger small" (click)="removeReimbursement(reimbursement.rb_id)">
+              <span class="material-icons bg-danger">clear</span>
+            </button>
+          </td>
+
+          
+          <td>
+            <button type="button" class="btn btn-success small" (click)="approvereimbursement(reimbursement)">
+              <span class="material-icons">done_outline</span>
+            </button>
+          </td>
+          <td><button type="button" class="btn btn-primary small" (click)="goToEditComponent(reimbursement.rb_id)">
+            <span class="material-icons">feedback</span>
+          </button>
+        </td>
+        </tr>
+      </tbody>
+    </table>

@@ -1,0 +1,38 @@
+<div class="container mb-5">
+    <h2 style="text-align:center;">These are your current informations</h2>
+    <div class="card mt-5">
+      <div style="font-weight: bold;color:white;font-size:30px;text-align:center;" class="card-header bg-info">Update Information</div>
+      <div class="card-body">
+        <form #myForm="ngForm" (submit)="editUser()">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" placeholder="Username" name="username"
+              [(ngModel)]="userInfo.username" >
+          </div>
+          <div class="form-group">
+            <label for="user_fname">First Name:</label>
+            <input type="text" class="form-control" id="user_fname" placeholder="First Name" name="First Name"
+              [(ngModel)]="userInfo.user_fname">
+          </div>
+          <div class="form-group">
+            <label for="user_lname">Last Name :</label>
+            <input type="text" class="form-control" id="user_lname" placeholder="Last Name" name="Last Name"
+              [(ngModel)]="userInfo.user_lname" required>
+          </div>
+          <div class="form-group">
+            <label for="user_address">Address:</label>
+            <input type="text" class="form-control" id="user_address" placeholder="Enter amount" name="Address"
+              [(ngModel)]="userInfo.user_address" required>
+          </div>
+          <div class="form-group">
+            <label for="user_contact">Contact:</label>
+            <input type="text" class="form-control" id="user_contact" placeholder="Enter amount" name="Contact"
+              [(ngModel)]="userInfo.user_contact" required>
+          </div>
+          <div class="card-footer bg-info">
+            <button onclick="myFunction()" type="submit" class="btn btn-danger mr-5" [disabled]='!myForm.valid'>Update</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

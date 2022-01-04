@@ -1,0 +1,29 @@
+
+
+<div class="container mb-5">
+ 
+  <h2 style="text-align:center; font-weight: bold;font-size:60px;">Welcome!</h2>
+  <div class="card mt-5">
+    <div style="font-weight: bold;color:white;font-size:40px;text-align:center;" class="card-header bg-info">LOGIN</div>
+    <div class="card-body">
+      <form  #myForm="ngForm" (submit)="validateLogin()">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" class="form-control" id="username" placeholder="Enter user name" name="username" required
+            [(ngModel)]="newUser.username">
+        </div>
+        <div class="form-group">
+          <label for="user_password">Password:</label>
+          <input type="password" class="form-control" id="user_password" placeholder="Enter password"
+            name="user_password" required [(ngModel)]="newUser.user_password">
+        </div>
+        <div class="card-footer bg-info">
+          <button type="submit" class="btn btn-danger mr-5" [disabled]='!myForm.valid'>Login</button>
+        </div>
+      </form>
+    </div>
+   
+  </div>
+</div>
+
+

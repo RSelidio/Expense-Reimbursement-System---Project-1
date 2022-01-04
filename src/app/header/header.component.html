@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <!-- <a class="navbar-brand" href="#">Welcome</a> -->
+    
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item" *ngIf="isLoggedIn() && retrieveUserType() == 'employee'">
+        <a class="nav-link" routerLink="reimbursementlist-http-employee-homepage">Employee-HomePage</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && retrieveUserType() == 'employee'">
+        <a class="nav-link" routerLink="reimbursementlist-http">Reimbursement-List</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && retrieveUserType() == 'employee'">
+        <a class="nav-link" routerLink="reimbursementlist-http-manager-approvedreimbursement">Approved-Reimbursement</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && retrieveUserType() == 'employee'">
+        <a class="nav-link" routerLink="reimbursementlist-http-employee-edit">Update-Information</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && retrieveUserType() == 'manager'">
+        <a class="nav-link" routerLink="reimbursementlist-http-manager-homepage">Manager-Homepage</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && retrieveUserType() == 'manager'">
+        <a class="nav-link" routerLink="reimbursementlist-http-manager-pendingreimbursement">Pending-Reimbursement</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && retrieveUserType() == 'manager'">
+        <a class="nav-link" routerLink="reimbursementlist-http-showall-approved">Approved-Reimbursement</a>
+      </li>
+      <li class="nav-item" *ngIf="isLoggedIn() && retrieveUserType() == 'manager'">
+        <a class="nav-link" routerLink="reimbursementlist-http-manager-rbrequest-allemployees">Employees</a>
+      </li>
+      <li 
+        class="nav-item"
+        *ngIf="!isLoggedIn()">
+        <a class="nav-link" routerLink="login">Login</a>
+      </li>
+      <li 
+        class="nav-item"
+        *ngIf="isLoggedIn()">
+        <a class="nav-link" routerLink="logout">Logout</a>
+      </li>
+    </ul>
+  </nav>

@@ -1,0 +1,23 @@
+<div class="container">
+    <h2 style="text-align:center;">Approved Reimburstment</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Reimbursement ID</th>
+          <th>Username</th>
+          <th>Rreimbursement Date</th>
+          <th>Reimbursement Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reimbursement of allreimbursement">
+          <td>{{ reimbursement.rb_id }}</td>
+          <td>{{ reimbursement.username }}</td>
+          <td>{{ reimbursement.rb_date }}</td>
+          <td>{{ reimbursement.rb_amount }}</td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>

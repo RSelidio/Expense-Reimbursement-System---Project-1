@@ -1,0 +1,70 @@
+<div class="container">
+<h2>Employee List</h2>
+<input class="form-control" id="myInput" type="text" placeholder="Search.." [(ngModel)]="term">
+<br>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Address</th>
+      <th>Contact</th>
+      <th>View</th>
+
+
+    </tr>
+  </thead>
+  <tbody id="myTable">
+    <tr *ngFor="let UserInfo of allusers | filter:term">
+      <td>{{ UserInfo.user_id }}</td>
+      <td>{{ UserInfo.username }}</td>
+      <td>{{ UserInfo.user_fname }}</td>
+      <td>{{ UserInfo.user_lname }}</td>
+      <td>{{ UserInfo.user_address }}</td>
+      <td>{{ UserInfo.user_contact }}</td>
+      <td width="5%"><button type="button" class="btn btn-success" (click)="toggleAdd(UserInfo.user_id)">
+        <span class="material-icons">visibility</span>
+      </button></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="container pt-3 my-3 border">
+  
+  <p></p>
+  <hr>
+  <div *ngIf="flag">
+    
+    <form #myForm="ngForm">
+      <div class="container">
+        <h2 style="text-align:center;font-weight: bold;color:rgb(0, 0, 0);font-size:30px;">Pending Reimburstment Of The User </h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Reimbursement ID</th>
+              <th>Username</th>
+              <th>Rreimbursement Date</th>
+              <th>Reimbursement Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let reimbursement of allreimbursement">
+              <td>{{ reimbursement.rb_id }}</td>
+              <td>{{ reimbursement.username }}</td>
+              <td>{{ reimbursement.rb_date }}</td>
+              <td>{{ reimbursement.rb_amount }}</td>
+              <td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+    </form>
+  </div>
+
+  
+
+  
