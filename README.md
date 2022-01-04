@@ -36,10 +36,13 @@ To-do list:
 - All the `code` required to get started
 - Images of what it should look like
 
-## Usage
-
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
-
+Usage
+---
+To use the project you 
+1.	From browser open the link http://localhost:4200/ or add your port number
+2.	Chooser Login from the menu bar to enter as Employee (user name = sam , password =123) and as Manager(user name = joe , password =456)
+3.	Enter as an employee to submit requests, view  your pending requests, view your resolved request, view your profile and edit your profile  
+4.	Enter as a manager so can see all pending requests, all resolved request, specific employee history, you can approve or reject requests, see all the employee information and make rejestration for an employee
 
 
 ## License
