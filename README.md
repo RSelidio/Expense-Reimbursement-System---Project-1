@@ -39,10 +39,15 @@ To-do list:
 Usage
 ---
 To use the project you 
-1.	From browser open the link http://localhost:4200/ or add your port number
-2.	Create the PostgreSQL tables https://github.com/RSelidio/project1-javalin/blob/master/expense-reimbursement-system/Scripts/DB-Tables.sql.
-3.	Enter as an employee to submit requests, view  your pending requests, view your resolved request, view your profile and edit your profile  
-4.	Enter as a manager so can see all pending requests, all resolved request, specific employee history, you can approve or reject requests, see all the employee information and make rejestration for an employee
+1.	Create the PostgreSQL tables https://github.com/RSelidio/project1-javalin/blob/master/expense-reimbursement-system/Scripts/DB-Tables.sql.
+2.	Open angular CLI then type - npm install.
+3.	From browser open the link http://localhost:4200/.
+4.	Enter as an employee
+>* Employee can submit a reimbursement requests.
+>* Employee can view the current status of their current request.
+>* Manager can accept or deny a request.
+>* Manager can send notification if something wrong with the request.
+6.	Enter as a manager so can see all pending requests, all resolved request, specific employee history, you can approve or reject requests, see all the employee information and make rejestration for an employee
 
 
 ## License
