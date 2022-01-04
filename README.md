@@ -42,13 +42,12 @@ To use the project you
 1.	Create the PostgreSQL tables https://github.com/RSelidio/project1-javalin/blob/master/expense-reimbursement-system/Scripts/DB-Tables.sql.
 2.	Open angular CLI then type - npm install.
 3.	From browser open the link http://localhost:4200/.
-4.	Enter as an employee
+4.	Employee Feature.
 >* Employee can submit a reimbursement requests.
 >* Employee can view the current status of their current request.
+5.	Manager Feature
 >* Manager can accept or deny a request.
 >* Manager can send notification if something wrong with the request.
-6.	Enter as a manager so can see all pending requests, all resolved request, specific employee history, you can approve or reject requests, see all the employee information and make rejestration for an employee
-
 
 ## License
 
