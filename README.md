@@ -2,8 +2,7 @@
 
 ## Project Description
 
-A reimbursement System that manage the reimbursement request of employees. The Employee is able to request a reimbursements and the manager approve or deny the request.
-
+The Expense Reimbursement System will manage the process of reimbursing employees for expenses incurred while on company time. All employees in the company can log in and submit requests for reimbursement and view their past tickets and pending requests. Finance managers can log in and view all reimbursement requests and history for all employees in the company. Finance managers are authorized to approve and deny requests for expense reimbursement.
 ## Technologies Used
 
 * Java
